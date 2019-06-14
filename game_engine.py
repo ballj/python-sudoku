@@ -15,3 +15,10 @@ class Sudoku():
         """Print the current board"""
         board_out = '{}'.format(self.board_current)
         return board_out
+
+    def __setitem__(self, key, item):
+        """sets the value of a position on the current board"""
+        if 0 < item < 10:
+            self.board_current[key] = item
+        else:
+            raise ValueError('Item must be greater than 0 and less than 10')
