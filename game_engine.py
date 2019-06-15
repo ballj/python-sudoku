@@ -30,3 +30,7 @@ class Sudoku():
             self.board_current[key] = item
         else:
             raise ValueError('Item must be greater than 0 and less than 10')
+
+    def __getitem__(self, key):
+        """gets the value of a position on the current board"""
+        return self.board_current[key]
